@@ -1,10 +1,8 @@
 const findLongestWord = function (sentense) {
-  let longestWord;
-  let num = 0;
+  let longestWord = "";
   let array = sentense.trim().split(" ");
   for (let i = 0; i < array.length; i++) {
-    if (array[i].length > num) {
-      num = array[i].length;
+    if (array[i].length > longestWord.length) {
       longestWord = array[i];
     }
   }
@@ -12,4 +10,5 @@ const findLongestWord = function (sentense) {
   return longestWord;
 };
 
-console.log(findLongestWord("May the force be with you"));
+console.log(findLongestWord("May the 4th be with you"));
+// Congrats with hiliday btw ;)

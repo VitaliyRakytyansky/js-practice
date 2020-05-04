@@ -1,38 +1,31 @@
-let chinaPrice = 100;
-let chilePrice = 250;
-let australiaPrice = 170;
-let indiaPrice = 80;
-let jamaicaPrice = 120;
-
 let country = prompt("What country are you living in?");
 
-let capitalizedCountry =
-  country[0].toUpperCase() + country.slice(1).toLowerCase();
+const capitalizedCountry = country.toUpperCase();
 
 switch (capitalizedCountry) {
-  case "China":
+  case "CHINA":
     console.log(
-      `Delivery to your ${capitalizedCountry} will be cost ${chinaPrice} credits`
+      `Delivery to your ${capitalizedCountry} will be cost 100 credits`
     );
     break;
-  case "Chile":
+  case "CHILE":
     console.log(
-      `Delivery to your ${capitalizedCountry} will be cost ${chilePrice} credits`
+      `Delivery to your ${capitalizedCountry} will be cost 250 credits`
     );
     break;
-  case "Australia":
+  case "AUSTRALIA":
     console.log(
-      ` Delivery to your ${capitalizedCountry} will be cost ${australiaPrice} credits`
+      ` Delivery to your ${capitalizedCountry} will be cost 170 credits`
     );
     break;
-  case "India":
+  case "INDIA":
     console.log(
-      ` Delivery to your ${capitalizedCountry} will be cost ${indiaPrice} credits`
+      ` Delivery to your ${capitalizedCountry} will be cost 80 credits`
     );
     break;
-  case "Jamaica":
+  case "JAMAICA":
     console.log(
-      `Delivery to your ${capitalizedCountry} will be cost ${jamaicaPrice} credits`
+      `Delivery to your ${capitalizedCountry} will be cost 120 credits`
     );
     break;
   default:
