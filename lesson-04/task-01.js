@@ -1,6 +1,6 @@
-// // =========================================
-// // Task-01
-// // =========================================
+// =========================================
+// Task-01
+// =========================================
 
 const account = {
   owner: "Mango",
@@ -27,27 +27,27 @@ account.addOrder(5000, "order-4");
 console.log(account.balance); // 19000
 console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3', 'order-4']
 
-// // =========================================
-// // Task-02
-// // =========================================
+// =========================================
+// Task-02
+// =========================================
 
 const inventory = {
   items: ["Knife", "Gas mask"],
   add(itemName) {
     console.log(`Adding ${itemName} to inventory`);
 
-    inventory.items.push(`${itemName}`);
+    this.items.push(itemName);
   },
   remove(itemName) {
     console.log(`Removing ${itemName} from inventory`);
 
-    inventory.items = inventory.items.filter((item) => item !== itemName);
+    this.items = this.items.filter((item) => item !== itemName);
   },
 };
 
 const invokeInventoryAction = function (itemName, action) {
   console.log(`Invoking action on ${itemName}`);
-  action(itemName);
+  action.call(inventory, itemName);
 };
 
 invokeInventoryAction("Medkit", inventory.add);
