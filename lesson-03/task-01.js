@@ -45,7 +45,7 @@ const findBestEmployee = function (employee) {
     }
   });
 
-  return result.join("");
+  return result[0];
 };
 
 console.log(
@@ -112,12 +112,7 @@ const products = [
 ];
 
 const calculateTotalPrice = function (arr, productName) {
-  let totalPrice = 0;
-  arr.forEach((product) => {
-    if (product.name === productName) {
-      totalPrice = product.price * product.quantity;
-    }
-  });
-  return totalPrice;
+  const product = arr.find((item) => item.name === productName);
+  return product.price * product.quantity;
 };
 console.log(calculateTotalPrice(products, "Дроид"));
