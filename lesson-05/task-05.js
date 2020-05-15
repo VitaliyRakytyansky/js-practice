@@ -156,11 +156,11 @@ class Car {
     this._distance = 0;
   }
 
-  getPrice() {
-    this._price;
+  get price() {
+    return this._price;
   }
 
-  setPrice(price) {
+  set price(price) {
     this._price = price;
   }
 
@@ -187,7 +187,7 @@ class Car {
 
   drive(hours) {
     if (this._isOn === true) {
-      this._distance = this._speed * hours;
+      this._distance += this._speed * hours;
     }
   }
 }
@@ -207,6 +207,6 @@ mustang.turnOff();
 
 Car.getSpecs(mustang);
 
-console.log(mustang._price);
-mustang._price = 4000;
-console.log(mustang._price);
+console.log(mustang.price);
+mustang.price = 4000;
+console.log(mustang.price);
