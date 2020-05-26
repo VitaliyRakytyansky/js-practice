@@ -2,17 +2,17 @@
 // Task-01
 // =========================================
 
-const catigories = document.getElementsByTagName("h2");
+const categories = document.getElementsByTagName("h2");
 
-let output = (catigories) => {
-  Array.from(catigories).forEach((item) => {
+let output = (categories) => {
+  Array.from(categories).forEach((item) => {
     console.log(
       `Categories: ${item.textContent} </b> Quantity: ${item.nextElementSibling.children.length}`
     );
   });
 };
 
-output(catigories);
+output(categories);
 
 // =========================================
 // Task-02
@@ -57,7 +57,7 @@ const images = [
   },
 ];
 
-let ul = document.querySelector("#gallery");
+let ul = document.getElementById("#gallery");
 
 ul.insertAdjacentHTML(
   "afterbegin",
@@ -76,10 +76,10 @@ ul.insertAdjacentHTML(
 let counterValue = 0;
 
 const incrementButton = document.querySelector(
-  "button[data-action='increment']"
+  'button[data-action="increment"]'
 );
 const decrementButton = document.querySelector(
-  "button[data-action='decrement']"
+  'button[data-action="decrement"]'
 );
 const span = document.querySelector("span");
 
@@ -97,8 +97,8 @@ decrementButton.addEventListener("click", decrement);
 // Task-05
 // =========================================
 
-const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
+const input = document.getElementById("#name-input");
+const output = document.getElementById("#name-output");
 
 input.addEventListener("input", (e) => {
   output.textContent = e.target.value;
